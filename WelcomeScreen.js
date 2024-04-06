@@ -17,18 +17,17 @@ export default function WelcomeScreen() {
 const welcomeStyle = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#333333",
-    padding: 40,
   },
   header: {
-    padding: 10,
+    padding: 40,
     fontSize: 35,
     color: "#EDEFEE",
     textAlign: "center",
   },
   text: {
     fontSize: 25,
-    padding: 5,
+    padding: 20,
+    marginVertical: 8,
     color: "#EDEFEE",
     textAlign: "center",
   },
