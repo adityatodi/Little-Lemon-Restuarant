@@ -3,7 +3,7 @@ import { View, StyleSheet } from "react-native";
 
 import LittleLemonHeader from "./components/LittleLemonHeader";
 import LittleLemonFooter from "./components/LittleLemonFooter";
-import WelcomeScreen from "./WelcomeScreen";
+import WelcomeScreen from "./components/WelcomeScreen";
 import MenuItems from "./components/MenuItems";
 import FeedbackForm from "./components/FeedbackForm";
 import LoginScreen from "./components/LoginScreen";
@@ -11,11 +11,11 @@ import LoginScreen from "./components/LoginScreen";
 export default function App() {
     return (
         <>
-            <View style={appStlye.container_1}>
+            <View style={appStlye.container_header}>
                 <LittleLemonHeader />
                 <LoginScreen />
             </View>
-            <View style={appStlye.container_2}>
+            <View style={appStlye.container_footer}>
                 <LittleLemonFooter />
             </View>
         </>
@@ -23,11 +23,11 @@ export default function App() {
 }
 
 const appStlye = StyleSheet.create({
-    container_1: {
+    container_header: {
         flex: 1,
         backgroundColor: "#333333",
     },
-    container_2: {
+    container_footer: {
         backgroundColor: "#333333",
     },
 });
