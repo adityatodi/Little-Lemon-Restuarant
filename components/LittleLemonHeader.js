@@ -24,8 +24,9 @@ const headerStyle = StyleSheet.create({
         justifyContent: "center",
     },
     image: {
-        height: 150,
-        width: 100,
+        marginTop: 10,
+        height: 90,
+        width: 90,
         borderRadius: 0,
     },
     headerText: {

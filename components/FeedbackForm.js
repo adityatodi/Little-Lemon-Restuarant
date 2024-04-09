@@ -51,6 +51,7 @@ const FeedbackForm = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 0.8,
+        backgroundColor: "#333333",
     },
     title: {
         fontSize: 24,

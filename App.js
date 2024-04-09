@@ -5,9 +5,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import LittleLemonHeader from "./components/LittleLemonHeader";
 import LittleLemonFooter from "./components/LittleLemonFooter";
-import WelcomeScreen from "./components/WelcomeScreen";
-import MenuItems from "./components/MenuItems";
-import FeedbackForm from "./components/FeedbackForm";
+import LandingPage from "./components/_layout";
 import LoginScreen from "./components/LoginScreen";
 
 const Stack = createNativeStackNavigator();
@@ -29,16 +27,16 @@ export default function App() {
                     }}
                 >
                     <Stack.Screen
-                        options={{ title: "Home" }}
+                        options={{ title: "Home", headerShown: false }}
                         name="Welcome"
-                        component={WelcomeScreen}
+                        component={LandingPage}
                     />
                     <Stack.Screen name="Login" component={LoginScreen} />
-                    <Stack.Screen name="Menu" component={MenuItems} />
-                    <Stack.Screen
-                        name="Feedback Form"
+                    {/* <Stack.Screen name="Menu" component={MenuItems} /> */}
+                    {/* <Stack.Screen
+                        name="Feedback"
                         component={FeedbackForm}
-                    />
+                    /> */}
                 </Stack.Navigator>
             </View>
             <View style={appStlye.container_footer}>

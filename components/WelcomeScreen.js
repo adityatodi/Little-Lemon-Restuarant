@@ -5,34 +5,20 @@ import {
     ScrollView,
     StyleSheet,
     useColorScheme,
-    Pressable,
 } from "react-native";
 
-export default function WelcomeScreen({ navigation }) {
+export default function WelcomeScreen({}) {
     const colorScheme = useColorScheme();
 
     return (
-        <ScrollView
+        <View
             style={[
                 welcomeStyle.container,
                 colorScheme === "light"
                     ? { backgroundColor: "#fff" }
                     : { backgroundColor: "#333333" },
             ]}
-            indicatorStyle={"white"}
         >
-            <View style={welcomeStyle.header}>
-                <Text
-                    style={[
-                        welcomeStyle.headerText,
-                        colorScheme === "light"
-                            ? { color: "#333333" }
-                            : { color: "#fff" },
-                    ]}
-                >
-                    Little Lemon!
-                </Text>
-            </View>
             <Text
                 style={[
                     welcomeStyle.text,
@@ -46,13 +32,7 @@ export default function WelcomeScreen({ navigation }) {
                 environment. We would love to hear more about your experience
                 with us!
             </Text>
-            <Pressable
-                style={welcomeStyle.button}
-                onPress={() => navigation.navigate("Menu")}
-            >
-                <Text style={welcomeStyle.buttonText}>Show Menu</Text>
-            </Pressable>
-        </ScrollView>
+        </View>
     );
 }
 
