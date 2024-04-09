@@ -7,7 +7,7 @@ import {
 } from "react-native";
 import React, { useState } from "react";
 
-export default function LoginScreen() {
+export default function LoginScreen({ navigation }) {
     const [email, onChangeEmail] = useState("");
     const [password, onChangePassword] = useState("");
     const [loggedIn, setLoggedIn] = useState(false);
@@ -54,9 +54,9 @@ export default function LoginScreen() {
                     Please enter a valid email and password
                 </Text>
             )}
-            {loggedIn && (
-                <Text style={styles.regularText}>You are logged in!</Text>
-            )}
+            {loggedIn &&
+                (setLoggedIn((prevState) => !prevState),
+                navigation.navigate("Welcome"))}
         </ScrollView>
     );
 }
@@ -64,6 +64,7 @@ export default function LoginScreen() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        backgroundColor: "#333333",
     },
     headerText: {
         padding: 40,

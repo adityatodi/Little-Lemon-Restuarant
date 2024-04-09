@@ -16,7 +16,7 @@ The application currently is in development and different features are made avai
 
 - `WelcomeScreen.js` supports the welcome screen for introducing the Little Lemon Restuarant
 <p align="center" width="100%">
-    <img width="33%" src='data/welcome_landing.PNG'> 
+    <img width="33%" src='img/welcome_landing.PNG'> 
 </p>
 
 ### Menu Screen
@@ -24,14 +24,14 @@ The application currently is in development and different features are made avai
 - `MenuItems.js` the landing page displays a welcoming message and a button to view the menu.
 
 <p align="center" width="100%">
-    <img width="33%" src='data/menu_landing.PNG'> 
+    <img width="33%" src='img/menu_landing.PNG'> 
 </p>
 
 
 - Once the user presses on `Show Menu` button, the app provies the menu items available with their pricing and sectioned views for _Appetizers_, _Main Course_ and _Desserts_
 
 <p align="center" width="100%">
-    <img width="33%" src='data/menu_showing.PNG'> 
+    <img width="33%" src='img/menu_showing.PNG'> 
 </p>
 
 ### Feedback Screen
@@ -39,7 +39,7 @@ The application currently is in development and different features are made avai
 - `FeedbackForm.js` gives the users the capability to provide a feedback
   
 <p align="center" width="100%">
-    <img width="33%" src='data/feedback_form.PNG'> 
+    <img width="33%" src='img/feedback_form.PNG'> 
 </p>
 
 ### Login Screen
@@ -48,24 +48,25 @@ The application currently is in development and different features are made avai
 - The email has the keyboard type as `email-address` providing enhanced user experience
 
 <p align="center" width="100%">
-    <img width="33%" src='data/login_landing.PNG'> 
+    <img width="33%" src='img/login_landing.PNG'> 
 </p>
 
 - If the user tries to login without entering an email address or password, the app shows appropriate error
 
 <p align="center" width="100%">
-    <img width="33%" src='data/login_error.PNG'> 
+    <img width="33%" src='img/login_error.PNG'> 
 </p>
 
 - On successful login, the app proceeds and displays a success message
 
 <p align="center" width="100%">
-    <img width="33%" src='data/login_success.PNG'> 
+    <img width="33%" src='img/login_success.PNG'> 
 </p>
 
 ## Todo List
 
-- [ ] add various features as options using navigation bar in the application
+- [x] ~~*add logo to the screens*~~ [2024-04-06]
 - [x] ~~*create a login page for the restuarant*~~ [2024-04-06]
+- [x] ~~*add various features as options using navigation bar in the application*~~ [2024-04-08]
 - [ ] connect to menu database to fetch the menu items
 - [ ] connect to feedback database to persist the feedback

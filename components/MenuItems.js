@@ -62,34 +62,15 @@ const MenuItems = () => {
             <Text style={menuStyles.sectionHeader}>{title}</Text>
         </View>
     );
-    const [showMenu, setShowMenu] = useState(false);
     return (
         <View style={menuStyles.container}>
-            {!showMenu && (
-                <Text style={menuStyles.infoSection}>
-                    Little Lemon is a charming neighborhood bistro that serves
-                    simple food and classic cocktails in a lively but casual
-                    environment. View our menu to explore our cuisine with daily
-                    specials!
-                </Text>
-            )}
-            <Pressable
-                style={menuStyles.button}
-                onPress={() => setShowMenu((prevState) => !prevState)}
-            >
-                <Text style={menuStyles.buttonText}>
-                    {showMenu ? "Home" : "Show Menu"}
-                </Text>
-            </Pressable>
-            {showMenu && (
-                <SectionList
-                    keyExtractor={(item, index) => item + index}
-                    sections={menuItemsToDisplay}
-                    renderItem={renderItem}
-                    renderSectionHeader={renderSectionHeader}
-                    ItemSeparatorComponent={Separator}
-                ></SectionList>
-            )}
+            <SectionList
+                keyExtractor={(item, index) => item + index}
+                sections={menuItemsToDisplay}
+                renderItem={renderItem}
+                renderSectionHeader={renderSectionHeader}
+                ItemSeparatorComponent={Separator}
+            ></SectionList>
         </View>
     );
 };
