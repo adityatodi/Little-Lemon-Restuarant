@@ -5,6 +5,7 @@ import { createMaterialTopTabNavigator } from "@react-navigation/material-top-ta
 import FeedbackForm from "./FeedbackForm";
 import MenuItems from "./MenuItems";
 import WelcomeScreen from "./WelcomeScreen";
+import SubscribeScreen from "./SubscribeScreen";
 
 const Tab = createMaterialTopTabNavigator();
 export default function LandingPage() {
@@ -31,6 +32,10 @@ export default function LandingPage() {
                                 : "chatbox-ellipses-outline";
                         } else if (route.name === "Home") {
                             iconName = focused ? "home" : "home-outline";
+                        } else if (route.name === "Newsletter") {
+                            iconName = focused
+                                ? "newspaper"
+                                : "newspaper-outline";
                         }
                         return <Ionicons name={iconName} size={size} />;
                     },
@@ -58,6 +63,11 @@ export default function LandingPage() {
                 <Tab.Screen
                     name="Feedback"
                     component={FeedbackForm}
+                    options={{ headerShown: false }}
+                />
+                <Tab.Screen
+                    name="Newsletter"
+                    component={SubscribeScreen}
                     options={{ headerShown: false }}
                 />
             </Tab.Navigator>

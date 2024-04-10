@@ -1,11 +1,5 @@
 import * as React from "react";
-import {
-    Text,
-    View,
-    ScrollView,
-    StyleSheet,
-    useColorScheme,
-} from "react-native";
+import { Text, View, Image, StyleSheet, useColorScheme } from "react-native";
 
 export default function WelcomeScreen({}) {
     const colorScheme = useColorScheme();
@@ -19,6 +13,13 @@ export default function WelcomeScreen({}) {
                     : { backgroundColor: "#333333" },
             ]}
         >
+            <Image
+                source={require("../img/little-lemon-logo.png")}
+                resizeMode={"contain"}
+                style={welcomeStyle.image}
+                accessible={true}
+                accessibilityLabel="Logo of Little Lemon"
+            ></Image>
             <Text
                 style={[
                     welcomeStyle.text,
@@ -27,10 +28,7 @@ export default function WelcomeScreen({}) {
                         : { color: "#fff" },
                 ]}
             >
-                Little Lemon is a charming neighborhood bistro that serves
-                simple food and classic cocktails in a lively but casual
-                environment. We would love to hear more about your experience
-                with us!
+                Little Lemon, your local Mediterranean Bistro
             </Text>
         </View>
     );
@@ -39,10 +37,12 @@ export default function WelcomeScreen({}) {
 const welcomeStyle = StyleSheet.create({
     container: {
         flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
     },
     image: {
-        height: 100,
-        width: 100,
+        height: 250,
+        width: 250,
         borderRadius: 20,
     },
     header: {
@@ -57,7 +57,6 @@ const welcomeStyle = StyleSheet.create({
         margin: 40,
         height: 45,
         width: 120,
-        alignSelf: "center",
         backgroundColor: "#EE9972",
         borderColor: "#333333",
         borderWidth: 1,
@@ -65,7 +64,6 @@ const welcomeStyle = StyleSheet.create({
     },
     buttonText: {
         color: "#333333",
-        textAlign: "center",
         fontSize: 18,
     },
     headerText: {
@@ -74,12 +72,14 @@ const welcomeStyle = StyleSheet.create({
         paddingTop: 30,
         paddingBottom: 10,
         fontSize: 30,
-        textAlign: "center",
     },
     text: {
-        fontSize: 25,
+        fontSize: 20,
         padding: 20,
-        marginVertical: 8,
+        marginVertical: 20,
+        margin: 18,
         textAlign: "center",
+        fontWeight: "bold",
+        color: "rgb(67, 83, 77)",
     },
 });

@@ -1,17 +1,16 @@
 import * as React from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, StyleSheet, Image } from "react-native";
 
 export default function LittleLemonHeader() {
     return (
         <View style={headerStyle.container}>
             <Image
-                source={require("../img/little_lemon_logo.png")}
+                source={require("../img/little-lemon-logo.png")}
                 resizeMode={"contain"}
                 style={headerStyle.image}
                 accessible={true}
                 accessibilityLabel="Logo of Little Lemon"
             ></Image>
-            <Text style={headerStyle.headerText}>Little Lemon</Text>
         </View>
     );
 }
@@ -24,10 +23,11 @@ const headerStyle = StyleSheet.create({
         justifyContent: "center",
     },
     image: {
-        marginTop: 10,
-        height: 90,
-        width: 90,
+        alignSelf: "center",
+        height: 80,
+        width: 80,
         borderRadius: 0,
+        alignContent: "center",
     },
     headerText: {
         paddingRight: 10,

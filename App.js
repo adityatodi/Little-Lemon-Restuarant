@@ -32,11 +32,6 @@ export default function App() {
                         component={LandingPage}
                     />
                     <Stack.Screen name="Login" component={LoginScreen} />
-                    {/* <Stack.Screen name="Menu" component={MenuItems} /> */}
-                    {/* <Stack.Screen
-                        name="Feedback"
-                        component={FeedbackForm}
-                    /> */}
                 </Stack.Navigator>
             </View>
             <View style={appStlye.container_footer}>

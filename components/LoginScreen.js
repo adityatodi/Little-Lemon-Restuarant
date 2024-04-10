@@ -1,62 +1,45 @@
-import {
-    ScrollView,
-    Text,
-    StyleSheet,
-    TextInput,
-    Pressable,
-} from "react-native";
+import { ScrollView, Text, StyleSheet, TextInput } from "react-native";
 import React, { useState } from "react";
+import { validateEmail } from "../utils";
+import { validatePassword } from "../utils";
+import Button from "../utils/button";
 
 export default function LoginScreen({ navigation }) {
     const [email, onChangeEmail] = useState("");
     const [password, onChangePassword] = useState("");
-    const [loggedIn, setLoggedIn] = useState(false);
-    const [invalidInput, setInvalidInput] = useState(false);
+    const isPasswordValid = validatePassword(password);
+    const isEmailValid = validateEmail(email);
     return (
         <ScrollView style={styles.container}>
             <Text style={styles.headerText}>Welcome to Little Lemon</Text>
-            {!loggedIn && (
-                <>
-                    <Text style={styles.regularText}>Login to continue </Text>
-                    <TextInput
-                        style={styles.input}
-                        value={email}
-                        placeholder="Email"
-                        onChangeText={onChangeEmail}
-                        keyboardType="email-address"
-                        clearButtonMode="always"
-                    ></TextInput>
+            <Text style={styles.regularText}>Login to continue </Text>
+            <TextInput
+                style={styles.input}
+                value={email}
+                placeholder="Email"
+                onChangeText={onChangeEmail}
+                keyboardType="email-address"
+                clearButtonMode="always"
+            ></TextInput>
 
-                    <TextInput
-                        style={styles.input}
-                        value={password}
-                        placeholder="Password"
-                        onChangeText={onChangePassword}
-                        keyboardType="default"
-                        clearButtonMode="always"
-                        secureTextEntry={true}
-                        maxLength={14}
-                    ></TextInput>
-                    <Pressable
-                        style={styles.button}
-                        onPress={() =>
-                            email.length == 0 || password.length == 0
-                                ? setInvalidInput((prevState) => !prevState)
-                                : setLoggedIn((prevState) => !prevState)
-                        }
-                    >
-                        <Text style={styles.buttonText}>Log in</Text>
-                    </Pressable>
-                </>
-            )}
-            {invalidInput && !loggedIn && (
-                <Text style={styles.alertText}>
-                    Please enter a valid email and password
-                </Text>
-            )}
-            {loggedIn &&
-                (setLoggedIn((prevState) => !prevState),
-                navigation.navigate("Welcome"))}
+            <TextInput
+                style={styles.input}
+                value={password}
+                placeholder="Password"
+                onChangeText={onChangePassword}
+                keyboardType="default"
+                clearButtonMode="always"
+                secureTextEntry={true}
+                maxLength={14}
+            ></TextInput>
+            <Button
+                onPress={() => {
+                    navigation.navigate("Welcome");
+                }}
+                disabled={!isPasswordValid || !isEmailValid}
+            >
+                Log in
+            </Button>
         </ScrollView>
     );
 }
