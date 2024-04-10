@@ -12,36 +12,6 @@ Snack is Open Source. You can find the code on the [GitHub repo](https://github.
 
 The application currently is in development and different features are made available separately.
 
-### Welcome Screen
-
-- `WelcomeScreen.js` supports the welcome screen for introducing the Little Lemon Restuarant
-<p align="center" width="100%">
-    <img width="33%" src='img/welcome_landing.PNG'> 
-</p>
-
-### Menu Screen
-
-- `MenuItems.js` the landing page displays a welcoming message and a button to view the menu.
-
-<p align="center" width="100%">
-    <img width="33%" src='img/menu_landing.PNG'> 
-</p>
-
-
-- Once the user presses on `Show Menu` button, the app provies the menu items available with their pricing and sectioned views for _Appetizers_, _Main Course_ and _Desserts_
-
-<p align="center" width="100%">
-    <img width="33%" src='img/menu_showing.PNG'> 
-</p>
-
-### Feedback Screen
-
-- `FeedbackForm.js` gives the users the capability to provide a feedback
-  
-<p align="center" width="100%">
-    <img width="33%" src='img/feedback_form.PNG'> 
-</p>
-
 ### Login Screen
 - `LoginScreen.js` provides the users the capability to login using email and password
 - The password is secured input type
@@ -51,16 +21,59 @@ The application currently is in development and different features are made avai
     <img width="33%" src='img/login_landing.PNG'> 
 </p>
 
-- If the user tries to login without entering an email address or password, the app shows appropriate error
+- The validations on email include: 
+  - Can start with a quoted string (e.g., "username") or an unquoted string (e.g., username)
+  - The unquoted string can contain letters, digits, and certain special characters (., _, +, -, and @)
+  - The email address must contain the @ symbol, followed by either:
+    - An IP address in square brackets (e.g., [123.45.67.89])
+    - A domain name consisting of one or more parts separated by periods (e.g., example.com)
+- The validations on password include:
+  - Must be at least 8 characters long
+  - Must contain at least one digit
+  - Must contain at least one lowercase letter
+  - Must contain at least one uppercase letter
+  - Must contain at least one special character from the set `!@#$%^&*()_+}{":;'?/>.<,.`
+  - Must not contain any whitespace characters (spaces, tabs, newlines, etc.)
 
 <p align="center" width="100%">
-    <img width="33%" src='img/login_error.PNG'> 
+    <img width="33%" src='img/login_email.PNG'> 
 </p>
 
-- On successful login, the app proceeds and displays a success message
+- On successfully passing the validations, the log in button is clickable
 
 <p align="center" width="100%">
     <img width="33%" src='img/login_success.PNG'> 
+</p>
+
+### Welcome Screen
+
+- `Home` screen is the landing page after successful login. It introduces the Little Lemon Restuarant
+<p align="center" width="100%">
+    <img width="33%" src='img/welcome_landing.PNG'> 
+</p>
+
+### Menu Screen
+
+- Once the user presses on `Menu` tab, the app provies the menu items available with their pricing and sectioned views for _Appetizers_, _Main Course_ and _Desserts_
+
+<p align="center" width="100%">
+    <img width="33%" src='img/menu_showing.PNG'> 
+</p>
+
+### Feedback Screen
+
+- `FeedbackForm` tab gives the users the capability to provide a feedback
+  
+<p align="center" width="100%">
+    <img width="33%" src='img/feedback_form.PNG'> 
+</p>
+
+### Newsletter Screen
+
+- `Newsletter` tab provides the user option to subscribe to the newsletter for updates about the delicious recipes.
+  
+<p align="center" width="100%">
+    <img width="33%" src='img/newsletter_landing.PNG'> 
 </p>
 
 ## Todo List
@@ -68,5 +81,7 @@ The application currently is in development and different features are made avai
 - [x] ~~*add logo to the screens*~~ [2024-04-06]
 - [x] ~~*create a login page for the restuarant*~~ [2024-04-06]
 - [x] ~~*add various features as options using navigation bar in the application*~~ [2024-04-08]
+- [x] ~~*add newsletter option to subscribe to Little Lemon Restuarant*~~ [2024-04-09]
+- [x] ~~*add validation checks for email and password fields in login page*~~ [2024-04-09]
 - [ ] connect to menu database to fetch the menu items
 - [ ] connect to feedback database to persist the feedback
