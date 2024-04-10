@@ -1,12 +1,6 @@
 # Little Lemon Restuarant App
-
-Open the `App.js` file to start writing some code. You can preview the changes directly on your phone or tablet by scanning the **QR code** or use the iOS or Android emulators. When you're done, click **Save** and share the link!
-
-When you're ready to see everything that Expo provides (or if you want to use your own editor) you can **Download** your project and use it with [expo-cli](https://docs.expo.io/get-started/installation).
-
-All projects created in Snack are publicly available, so you can easily share the link to this project via link, or embed it on a web page with the `<>` button.
-
-Snack is Open Source. You can find the code on the [GitHub repo](https://github.com/expo/snack).
+This is a restuarant application developed using Expo Go. It supports cross-platform development and OTA (Over-The-Air) updates to the application. 
+This project is aimed to provide a simple yet powerful interface for restuarants.
 
 ## Features
 
@@ -76,7 +70,21 @@ The application currently is in development and different features are made avai
     <img width="33%" src='img/newsletter_landing.PNG'> 
 </p>
 
-## Todo List
+## Contributing to this project
+
+### Getting Started
+
+- Clone the repository into your local `git clone https://github.com/adityatodi/Little-Lemon-Restuarant.git`
+- Move to the project directory `cd Little-Lemon-Restuarant`
+- Install the required node_module packages specified in `package.json` using `npm install`
+- Run the app by using the command `npx expo start`
+- You can use iOS or Android simulator to launch the app
+
+### Create merge request
+
+If you want to help expand the utility of this project and add more features which you deem useful, you can generate a new merge request.
+
+### Todo List
 
 - [x] ~~*add logo to the screens*~~ [2024-04-06]
 - [x] ~~*create a login page for the restuarant*~~ [2024-04-06]
